@@ -1,26 +1,30 @@
-import { useState } from 'react';
-import LoginForm from './components/loginform'; // Siguraduhin na 'components' ay nasa loob din ng 'src'
-import Dashboard from './components/dashboard';
+import React, { useState } from 'react'
+import LoginForm from './LoginForm.jsx'
+import Dashboard from './Dashboard.jsx'
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [user, setUser] = useState("");
+  const [isLoggedIn, setIsLoggedIn] = useState(false)
+  const [error, setError] = useState("")
 
-  const handleLogin = (name) => {
-    setUser(name);
-    setIsLoggedIn(true);
-  };
+  const handleLogin = ({ username, password }) => {
+    // Mock authentication
+    if (username === "admin" && password === "1234") {
+      setIsLoggedIn(true)
+      setError("")
+    } else {
+      setError(`Invalid credentials for ${username}`)
+    }
+  }
 
   return (
-    // Ito yung magsisilbing "wrapper" na i-ce-center natin sa index.css
     <div className="app-container">
       {isLoggedIn ? (
-        <Dashboard username={user} />
+        <Dashboard />
       ) : (
-        <LoginForm onLogin={handleLogin} />
+        <LoginForm onLogin={handleLogin} error={error} />
       )}
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
