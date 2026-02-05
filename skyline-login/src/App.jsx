@@ -12,10 +12,9 @@ function App() {
   };
 
   return (
-    <div>
-      {/* Kapag isLoggedIn ay true, lilitaw ang Dashboard */}
+    <>
       {isLoggedIn ? <Dashboard username={user} /> : <LoginForm onLogin={handleLogin} />}
-    </div>
+    </>
   );
 }
 
