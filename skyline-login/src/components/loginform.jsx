@@ -9,19 +9,45 @@ const LoginForm = ({ onLogin }) => {
   };
 
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', backgroundColor: '#f0f2f5' }}>
-      <form onSubmit={handleSubmit} style={{ padding: '40px', background: 'white', borderRadius: '10px', boxShadow: '0 4px 10px rgba(0,0,0,0.1)', textAlign: 'center' }}>
-        <h2 style={{ color: '#1a73e8', marginBottom: '20px' }}>SkyLine Login</h2>
+    <div style={{
+      padding: '40px', 
+      background: 'white', 
+      borderRadius: '20px', 
+      boxShadow: '0 10px 25px rgba(221, 160, 221, 0.3)', // Light purple shadow
+      textAlign: 'center',
+      width: '350px',
+      border: '2px solid #f8bbd0' // Light pink border
+    }}>
+      <h2 style={{ color: '#8e44ad', marginBottom: '10px' }}>SkyLine Login</h2>
+      <p style={{ color: '#ad1457', fontSize: '14px', marginBottom: '20px' }}>Welcome back, Gorgeous!</p>
+      <form onSubmit={handleSubmit}>
         <input 
           type="text" 
           placeholder="Enter Username" 
           value={username} 
           onChange={(e) => setUsername(e.target.value)} 
-          style={{ padding: '10px', width: '100%', marginBottom: '20px', borderRadius: '5px', border: '1px solid #ccc' }}
+          style={{ 
+            padding: '12px', 
+            width: '100%', 
+            marginBottom: '20px', 
+            borderRadius: '10px', 
+            border: '1px solid #f48fb1',
+            boxSizing: 'border-box',
+            outline: 'none'
+          }}
         />
-        <br />
-        <button type="submit" style={{ padding: '10px 20px', backgroundColor: '#1a73e8', color: 'white', border: 'none', borderRadius: '5px', cursor: 'pointer', width: '100%' }}>
-          Login
+        <button type="submit" style={{ 
+          padding: '12px', 
+          backgroundColor: '#ce93d8', // Light Purple
+          color: 'white', 
+          border: 'none', 
+          borderRadius: '10px', 
+          cursor: 'pointer', 
+          width: '100%',
+          fontWeight: 'bold',
+          transition: '0.3s'
+        }}>
+          LOG IN
         </button>
       </form>
     </div>
