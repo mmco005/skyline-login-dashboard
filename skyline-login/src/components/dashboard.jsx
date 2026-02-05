@@ -20,7 +20,7 @@ const Dashboard = ({ username }) => {
         borderRadius: '10px',
         fontSize: '14px'
       }}>
-        System Status: Online 
+        System Status: ✨ Pink & Fabulous ✨
       </div>
     </div>
   );

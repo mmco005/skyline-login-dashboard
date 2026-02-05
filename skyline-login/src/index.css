@@ -1,14 +1,10 @@
-* {
-  margin: 0 !important;
-  padding: 0 !important;
-  box-sizing: border-box !important;
-}
-
-html, body, #root {
-  width: 100vw !important;
-  height: 100vh !important;
-  display: flex !important;
-  justify-content: center !important; /* Center horizontal */
-  align-items: center !important;     /* Center vertical */
-  background: linear-gradient(135deg, #fce4ec 0%, #f3e5f5 100%) !important;
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /* Heto ang gradient na pink/purple */
+  background: linear-gradient(135deg, #fce4ec 0%, #f3e5f5 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
